@@ -1,6 +1,7 @@
 \beamer@endinputifotherversion {3.33pt}
 \select@language {ngerman}
 \beamer@sectionintoc {1}{Integration in Eclipse}{3}{0}{1}
-\beamer@sectionintoc {2}{Architektur}{5}{0}{2}
-\beamer@sectionintoc {3}{Extension Points}{14}{0}{3}
-\beamer@sectionintoc {4}{Workspace UI}{18}{0}{4}
+\beamer@sectionintoc {2}{Struktur eines Plugins}{5}{0}{2}
+\beamer@sectionintoc {3}{Architektur}{9}{0}{3}
+\beamer@sectionintoc {4}{Extension Points}{18}{0}{4}
+\beamer@sectionintoc {5}{Workspace UI}{22}{0}{5}

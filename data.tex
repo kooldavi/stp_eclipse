@@ -47,6 +47,42 @@
   \end{itemize}
 \end{frame}
 
+\section{Struktur eines Plugins}
+\begin{frame}
+  \frametitle{Struktur eines Plugins}
+  \begin{itemize}
+  \item \texttt{plugin.xml}
+  \item \texttt{MANIFEST.MF}
+  \item Bibliotheken
+  \item Implementierung
+  \item Ressourcen (z.B. Icons)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Struktur eines Plugins}
+  \framesubtitle{plugin.xml}
+  \begin{itemize}
+  \item Definition der Extension Points, die vom Plugin erweitert werden
+  \item Definition der Extension Points, die das Plugin bereitstellt, sodass andere Plugins diese erweitern können
+  \item Struktur: \\
+  \texttt{<plugin>\\ \ \ <extension point="...">\\ \ \ <...> (abhängig vom Extension Point)\\ \ \ </extension>\\ </plugin>}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Struktur eines Plugins}
+  \framesubtitle{MANIFEST.MF}
+  \begin{itemize}
+    \item OSGi Manifest
+    \item Definition von Metadaten des Plugins
+    \begin{itemize}
+      \item Name, Version, Package
+      \item Abhängigkeiten
+    \end{itemize}
+    \item \includegraphics[scale=0.8]{images/manifest.png}
+  \end{itemize}
+\end{frame}
 
 \section{Architektur}
 \begin{frame}

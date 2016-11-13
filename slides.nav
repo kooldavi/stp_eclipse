@@ -10,7 +10,7 @@
 \headcommand {\beamer@framepages {3}{3}}
 \headcommand {\slideentry {1}{0}{4}{4/4}{}{0}}
 \headcommand {\beamer@framepages {4}{4}}
-\headcommand {\sectionentry {2}{Architektur}{5}{Architektur}{0}}
+\headcommand {\sectionentry {2}{Struktur eines Plugins}{5}{Struktur eines Plugins}{0}}
 \headcommand {\beamer@sectionpages {3}{4}}
 \headcommand {\beamer@subsectionpages {3}{4}}
 \headcommand {\slideentry {2}{0}{5}{5/5}{}{0}}
@@ -21,19 +21,19 @@
 \headcommand {\beamer@framepages {7}{7}}
 \headcommand {\slideentry {2}{0}{8}{8/8}{}{0}}
 \headcommand {\beamer@framepages {8}{8}}
-\headcommand {\slideentry {2}{0}{9}{9/9}{}{0}}
+\headcommand {\sectionentry {3}{Architektur}{9}{Architektur}{0}}
+\headcommand {\beamer@sectionpages {5}{8}}
+\headcommand {\beamer@subsectionpages {5}{8}}
+\headcommand {\slideentry {3}{0}{9}{9/9}{}{0}}
 \headcommand {\beamer@framepages {9}{9}}
-\headcommand {\slideentry {2}{0}{10}{10/10}{}{0}}
+\headcommand {\slideentry {3}{0}{10}{10/10}{}{0}}
 \headcommand {\beamer@framepages {10}{10}}
-\headcommand {\slideentry {2}{0}{11}{11/11}{}{0}}
+\headcommand {\slideentry {3}{0}{11}{11/11}{}{0}}
 \headcommand {\beamer@framepages {11}{11}}
-\headcommand {\slideentry {2}{0}{12}{12/12}{}{0}}
+\headcommand {\slideentry {3}{0}{12}{12/12}{}{0}}
 \headcommand {\beamer@framepages {12}{12}}
-\headcommand {\slideentry {2}{0}{13}{13/13}{}{0}}
+\headcommand {\slideentry {3}{0}{13}{13/13}{}{0}}
 \headcommand {\beamer@framepages {13}{13}}
-\headcommand {\sectionentry {3}{Extension Points}{14}{Extension Points}{0}}
-\headcommand {\beamer@sectionpages {5}{13}}
-\headcommand {\beamer@subsectionpages {5}{13}}
 \headcommand {\slideentry {3}{0}{14}{14/14}{}{0}}
 \headcommand {\beamer@framepages {14}{14}}
 \headcommand {\slideentry {3}{0}{15}{15/15}{}{0}}
@@ -42,9 +42,9 @@
 \headcommand {\beamer@framepages {16}{16}}
 \headcommand {\slideentry {3}{0}{17}{17/17}{}{0}}
 \headcommand {\beamer@framepages {17}{17}}
-\headcommand {\sectionentry {4}{Workspace UI}{18}{Workspace UI}{0}}
-\headcommand {\beamer@sectionpages {14}{17}}
-\headcommand {\beamer@subsectionpages {14}{17}}
+\headcommand {\sectionentry {4}{Extension Points}{18}{Extension Points}{0}}
+\headcommand {\beamer@sectionpages {9}{17}}
+\headcommand {\beamer@subsectionpages {9}{17}}
 \headcommand {\slideentry {4}{0}{18}{18/18}{}{0}}
 \headcommand {\beamer@framepages {18}{18}}
 \headcommand {\slideentry {4}{0}{19}{19/19}{}{0}}
@@ -53,20 +53,31 @@
 \headcommand {\beamer@framepages {20}{20}}
 \headcommand {\slideentry {4}{0}{21}{21/21}{}{0}}
 \headcommand {\beamer@framepages {21}{21}}
-\headcommand {\slideentry {4}{0}{22}{22/22}{}{0}}
+\headcommand {\sectionentry {5}{Workspace UI}{22}{Workspace UI}{0}}
+\headcommand {\beamer@sectionpages {18}{21}}
+\headcommand {\beamer@subsectionpages {18}{21}}
+\headcommand {\slideentry {5}{0}{22}{22/22}{}{0}}
 \headcommand {\beamer@framepages {22}{22}}
-\headcommand {\slideentry {4}{0}{23}{23/23}{}{0}}
+\headcommand {\slideentry {5}{0}{23}{23/23}{}{0}}
 \headcommand {\beamer@framepages {23}{23}}
-\headcommand {\slideentry {4}{0}{24}{24/24}{}{0}}
+\headcommand {\slideentry {5}{0}{24}{24/24}{}{0}}
 \headcommand {\beamer@framepages {24}{24}}
-\headcommand {\slideentry {4}{0}{25}{25/25}{}{0}}
+\headcommand {\slideentry {5}{0}{25}{25/25}{}{0}}
 \headcommand {\beamer@framepages {25}{25}}
-\headcommand {\slideentry {4}{0}{26}{26/26}{}{0}}
+\headcommand {\slideentry {5}{0}{26}{26/26}{}{0}}
 \headcommand {\beamer@framepages {26}{26}}
-\headcommand {\slideentry {4}{0}{27}{27/27}{}{0}}
+\headcommand {\slideentry {5}{0}{27}{27/27}{}{0}}
 \headcommand {\beamer@framepages {27}{27}}
-\headcommand {\beamer@partpages {1}{27}}
-\headcommand {\beamer@subsectionpages {18}{27}}
-\headcommand {\beamer@sectionpages {18}{27}}
-\headcommand {\beamer@documentpages {27}}
-\headcommand {\def \inserttotalframenumber {22}}
+\headcommand {\slideentry {5}{0}{28}{28/28}{}{0}}
+\headcommand {\beamer@framepages {28}{28}}
+\headcommand {\slideentry {5}{0}{29}{29/29}{}{0}}
+\headcommand {\beamer@framepages {29}{29}}
+\headcommand {\slideentry {5}{0}{30}{30/30}{}{0}}
+\headcommand {\beamer@framepages {30}{30}}
+\headcommand {\slideentry {5}{0}{31}{31/31}{}{0}}
+\headcommand {\beamer@framepages {31}{31}}
+\headcommand {\beamer@partpages {1}{31}}
+\headcommand {\beamer@subsectionpages {22}{31}}
+\headcommand {\beamer@sectionpages {22}{31}}
+\headcommand {\beamer@documentpages {31}}
+\headcommand {\def \inserttotalframenumber {25}}
