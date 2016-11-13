@@ -1,0 +1,63 @@
+\usepackage{layout/beamerthemePI}
+\usepackage{tikz}
+
+%Use BeamerNotes?
+%\setbeameroption{show notes on second screen=right}
+\graphicspath{{images/}}
+
+%Make use of "normal" bibliography item styles
+\setbeamertemplate{bibliography item}[text]
+
+%Set PDF metadata according to data.tex
+\usepackage{hyperref}
+\makeatletter
+\AtBeginDocument{
+  \hypersetup{
+    pdftitle = {\@title},
+    pdfauthor = {\@author}
+  }
+}
+\makeatother
+
+\titlegraphic{\pgfuseimage{titlegraphic}}
+
+\begin{document}
+
+ \pgfdeclareverticalshading{fadeBlue}{\paperwidth}%
+ {color(0cm)=(bg);color(1cm)=(structure.fg!25!structure.bg)}
+
+\begingroup
+\makeatletter
+%\setbeamertemplate{background canvas}[vertical shading][top=bg,bottom=structure.fg!25!structure.bg]
+\setlength{\hoffset}{-25pt}
+\addtocounter{framenumber}{-1}
+\beamertemplatenavigationsymbolsempty
+\makeatother
+\begin{frame}[plain]
+    \titlepage
+    
+\end{frame}
+\endgroup
+
+%no subsections in toc
+\setcounter{tocdepth}{1}
+
+\begingroup
+\makeatletter
+\setbeamertemplate{sidebar left}{}
+\makeatother
+\begin{frame}
+  \frametitle{Agenda}
+  \tableofcontents
+\end{frame}
+\endgroup
+
+\AtBeginSection[]%
+{%
+\frame{\sectionpage}
+\addtocounter{framenumber}{-1}
+}
+
+\allSections
+
+\end{document}
