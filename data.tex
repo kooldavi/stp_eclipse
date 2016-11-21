@@ -1,11 +1,11 @@
 %
 % All data regarding this presentation has to be set in here
 %
-\title[TitleShort]{Eclipse IDE}
+\title[Eclipse IDE]{Eclipse IDE}
 %\subtitle{SubTitle}
-\author[AuthorShort]{Robert, Stefan, David}
+\author[Robert, Stefan, David]{Robert M{\"u}ller, Stefan Schmidt, David Schlosser}
 \date[22.11.2016]{Meeting}
-\pgfdeclareimage[height=3.0cm]{titlegraphic}{images/logoTitle}
+\pgfdeclareimage[height=3.0cm]{titlegraphic}{images/eclipse.png}
 
 \usepackage[utf8]{inputenc}
 
@@ -39,53 +39,6 @@
 %  \end{itemize}
 %\end{frame}
 
-\section{Integration in Eclipse}
-\begin{frame}
-  \frametitle{Integration in Eclipse}
-  \begin{itemize}
-    \item Plugins können an vordefinierten \textbf{Extension Points} die Funktionalität von Eclipse erweitern
-  \end{itemize}
-\end{frame}
-
-\section{Struktur eines Plugins}
-\begin{frame}
-  \frametitle{Struktur eines Plugins}
-  \begin{itemize}
-  \item \texttt{plugin.xml}
-  \item \texttt{MANIFEST.MF}
-  \item Bibliotheken
-  \item Implementierung
-  \item Ressourcen (z.B. Icons)
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Struktur eines Plugins}
-  \framesubtitle{plugin.xml}
-  \begin{itemize}
-  \item Definition der Extension Points, die vom Plugin erweitert werden
-  \item Definition der Extension Points, die das Plugin bereitstellt, sodass andere Plugins diese erweitern können
-  \item Struktur: \\
-  \texttt{<plugin>\\ \ \ <extension point="...">\\ \ \ <...> (abhängig vom Extension Point)\\ \ \ </extension>\\ </plugin>}
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Struktur eines Plugins}
-  \framesubtitle{MANIFEST.MF}
-  \begin{itemize}
-    \item OSGi Manifest
-    \item Definition von Metadaten des Plugins
-    \begin{itemize}
-      \item Name, Version, Package
-      \item Abhängigkeiten
-    \end{itemize}
-	\item \begin{minipage}{\linewidth}
-		\includegraphics[scale=0.8]{images/manifest.png}
-      \end{minipage}	 
-  \end{itemize}
-\end{frame}
-
 \section{Architektur}
 \begin{frame}
   \frametitle{Architektur}
@@ -93,7 +46,16 @@
 \end{frame}
 
 \begin{frame}
+	\frametitle{Architektur}
+	\framesubtitle{Extension Points}
+	\begin{itemize}
+		\item Plugins können an vordefinierten \textbf{Extension Points} die Funktionalität von Eclipse erweitern
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
   \frametitle{Architektur}
+  \framesubtitle{Platform runtime}
   \begin{itemize}
     \item Definiert Extension Points
     \item Basiert auf OSGi Framework
@@ -115,10 +77,10 @@
 
 \begin{frame}
   \frametitle{Architektur}
-  \framesubtitle{Workspace}
+  \framesubtitle{Workbench}
   \begin{itemize}
     \item Definiert API, um Ressourcen zu erstellen und zu verwalten
-    \item Ressourcen sind bspw.: Prjekte, Dateien, Ordner
+    \item Ressourcen sind bspw.: Projekte, Dateien, Ordner
     \item Werden im Dateisystem gespeichert
   \end{itemize}
 \end{frame}
@@ -128,7 +90,11 @@
   \framesubtitle{Workbench UI}
   \begin{itemize}
     \item Extension Points um UI Komponenten hinzuzufügen
-    \item Toolkits \textbf{JFace} und \textbf{SWT} zur Erstellung von UIs
+    \item Toolkits \textbf{JFace} und \textbf{SWT} zur Erstellung von UIs (ähnlich Swing)
+    \begin{itemize}
+    	\item JFace basiert auf SWT
+    	\item SWT unabhängig von Eclipse
+    \end{itemize}
   \end{itemize}
 \end{frame}
 
@@ -165,11 +131,115 @@
       \item Suchen und Ersetzen
       \item XML Konfiguration
       \item Zugriff auf Server
+      \item ...
     \end{itemize}
   \end{itemize}
 \end{frame}
 
+\begin{frame}
+	\frametitle{Architektur}
+	\framesubtitle{JDT}
+	\begin{itemize}
+		\item Java Development Tools
+		\item Funktionen zum Bearbeiten, Anzeigen, Kompilieren, Debuggen und Ausführen von Java Code
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Architektur}
+	\framesubtitle{PDE}
+	\begin{itemize}
+		\item Plugin Development Environment 
+		\item Stellt Tools für die Automatisierung von Erstellung, Veränderung, Debugging und Verteilung von Plug-ins zur Verfügung
+	\end{itemize}
+\end{frame}
+
 \section{Extension Points}
+\begin{frame}
+  \frametitle{Workspace UI}
+  \includegraphics[scale=0.4]{images/workspace-ui.png}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Extension Points}
+  \framesubtitle{Workspace UI}
+  \begin{itemize}
+    \item Eine \textbf{Seite (Page)} kann veschiedene Komponenten enthalten
+    \item Pages müssen typischerweise nicht programmiert werden
+  \end{itemize}
+  \includegraphics[scale=0.3]{images/workspace-ui.png}  
+\end{frame}
+
+\begin{frame}
+  \frametitle{Extension Points}
+  \framesubtitle{Workspace UI}
+  \begin{itemize}
+    \item Eine \textbf{Perspektive} definiert eine der Aufgabe angemessene Menge von Views, deren Layout und ausführbare Aktionen
+  \end{itemize}
+  \includegraphics[scale=0.3]{images/workspace-ui.png}  
+\end{frame}
+
+\begin{frame}
+  \frametitle{Extension Points}
+  \framesubtitle{Workspace UI}
+  \begin{itemize}
+    \item Eine \textbf{View} wird verwendet, um durch eine Informationshierarchie zu navigieren, Editoren zu öffnen oder Einstellungen des Editors zu bearbeiten
+    \item \texttt{org.eclipse.ui.views}
+  \end{itemize}
+  \includegraphics[scale=0.3]{images/workspace-ui.png}    
+\end{frame}
+
+\begin{frame}
+  \frametitle{Extension Points}
+  \framesubtitle{Workspace UI}
+  \begin{itemize}
+    \item Ein Editor wird verwendet, um ein Dokument oder ein anderes Objekt anzuzeigen und zu bearbeiten
+    \item \texttt{org.eclipse.ui.editors}
+  \end{itemize}
+  \includegraphics[scale=0.4]{images/editor.png}    
+\end{frame}
+
+\begin{frame}
+  \frametitle{Extension Points}
+  \framesubtitle{Workspace UI}
+  \begin{itemize}
+    \item Plugins können Einträge zur Baumstruktur der Einstellungen hinzufügen
+    \item \texttt{org.eclipse.ui.preferencePages}
+  \end{itemize}
+  \includegraphics[scale=0.3]{images/preference.png}    
+\end{frame}
+
+\begin{frame}
+  \frametitle{Extension Points}
+  \framesubtitle{Workspace UI}
+  \begin{itemize}
+    \item \textbf{Menu Bar}: die globale Tool Bar von Eclipse
+    \item Weitere Tool Bars und Kontextmenüs können erstellt werden
+    \item Einträge führen \textbf{Commands} aus oder beinhalten weitere Menüs
+    \item \texttt{org.eclipse.ui.menus}
+  \end{itemize}  
+  \includegraphics[scale=0.4]{images/toolbar.png}    
+\end{frame}
+
+\begin{frame}
+  \frametitle{Extension Points}
+  \framesubtitle{Workspace UI}
+  \begin{itemize}
+    \item \textbf{Dialoge:}
+    \begin{itemize}
+      \item Anzeige von Meldungen (z.B. Fehlern)
+      \item Bestätigung einer Aktion
+      \item Eingabe von Werten
+    \end{itemize}
+    \item \textbf{Wizard:}
+    \begin{itemize}
+      \item Geführte Eingabe von Daten in einer Sequenz verschiedener Formulare (z.B. Erstellen eines Projekts)
+      \item Besteht aus \textbf{Wizard Dialog} und mehreren \textbf{Wizard Pages}
+      \item Vordefinierte Extension Points existieren für Wizards zum Erstellen, Importieren und Exportieren von Objekten
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
 \begin{frame}
   \frametitle{Extension Points}
   \framesubtitle{Commands}
@@ -205,91 +275,79 @@
   \end{itemize}
 \end{frame}
 
-\section{Workspace UI}
+\section{Plugins}
 \begin{frame}
-  \frametitle{Workspace UI}
-  \includegraphics[scale=0.4]{images/workspace-ui.png}
+	\frametitle{Plugins}
+	\begin{itemize}
+		\item Ein Plugin ist ein OSGi \textbf{Bundle}
+		\item Bundle spezifiziert und implementiert:
+		\begin{itemize}
+			\item Laden von Java-Klassen
+			\item Management von Vorbedingungen
+			\item Life-Cycles (Start, Stop, Deinstallation, ...)
+			\begin{itemize}
+				\item Plugin wird erst gestartet, sobald eine Klasse des Plugins geladen wird
+				\item Start-Methode zur Initialisierung
+				\item Methoden haben BundleContext als Argument, über den Informationen zu allen installierten Plugins abgerufen werden können
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
 \end{frame}
 
+\section{Struktur eines Plugins}
 \begin{frame}
-  \frametitle{Workspace UI}
-  \framesubtitle{Seiten}
+  \frametitle{Struktur eines Plugins}
   \begin{itemize}
-    \item Eine \textbf{Seite (Page)} kann veschiedene Komponenten enthalten
-    \item Pages müssen typischerweise nicht programmiert werden
+  \item \texttt{plugin.xml}
+  \item \texttt{MANIFEST.MF}
+  \item Bibliotheken
+  \item Implementierung
+  \item Ressourcen (z.B. Icons)
   \end{itemize}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Workspace UI}
-  \framesubtitle{Perspektive}
+  \frametitle{Struktur eines Plugins}
+  \framesubtitle{plugin.xml}
   \begin{itemize}
-    \item Eine \textbf{Perspektive} definiert eine der Aufgabe angemessene Menge von Views, deren Layout und ausführbare Aktionen
+  \item Definition der Extension Points, die vom Plugin erweitert werden
+  \item Definition der Extension Points, die das Plugin bereitstellt, sodass andere Plugins diese erweitern können  
   \end{itemize}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Workspace UI}
-  \framesubtitle{View}
-  \begin{itemize}
-    \item Eine \textbf{View} wird verwendet, um durch eine Informationshierarchie zu navigieren, Editoren zu öffnen oder Einstellungen des Editors zu bearbeiten
-    \item \texttt{org.eclipse.ui.views}
-  \end{itemize}
+	\frametitle{Struktur eines Plugins}
+	\framesubtitle{plugin.xml}
+	\begin{itemize}
+	\item Struktur:
+	\item \texttt{<plugin>\\ \textless!-- Erweiterung vorhandener Extension Points --\textgreater\\ \ \ <extension point="..">\\ \ \ \ \ <..> (abhängig vom Extension Point)\\ \ \ </extension>\\ <!-- Definition eigener Extension Points -->\\ \ \ <extension-point id=".." name=".." schema=".."/> </plugin>}
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Workspace UI}
-  \framesubtitle{Editor}
+  \frametitle{Struktur eines Plugins}
+  \framesubtitle{MANIFEST.MF}
   \begin{itemize}
-    \item Ein Editor wird verwendet, um ein Dokument oder ein anderes Objekt anzuzeigen und zu bearbeiten
-    \item \texttt{org.eclipse.ui.editors}
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Workspace UI}
-  \framesubtitle{Preferences}
-  \begin{itemize}
-    \item Plugins können Einträge zur Baumstruktur der Einstellungen hinzufügen
-    \item \texttt{org.eclipse.ui.preferencePages}
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Workspace UI}
-  \framesubtitle{Tool Bar und Menu Bar}
-  \begin{itemize}
-    \item \textbf{Menu Bar}: die globale Tool Bar von Eclipse
-    \item Weitere Tool Bars und Kontextmenüs können erstellt werden
-    \item Einträge führen \textbf{Commands} aus oder beinhalten weitere Menüs
-    \item \texttt{org.eclipse.ui.menus}
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Workspace UI}
-  \framesubtitle{Dialoge und Wizards}
-  \begin{itemize}
-    \item \textbf{Dialoge:}
+    \item OSGi Manifest
+    \item Definition von Metadaten des Plugins
     \begin{itemize}
-      \item Anzeige von Meldungen (z.B. Fehlern)
-      \item Bestätigung einer Aktion
-      \item Eingabe von Werten
+      \item Name, Version, Package
+      \item Abhängigkeiten
     \end{itemize}
-    \item \textbf{Wizard:}
-    \begin{itemize}
-      \item Geführte Eingabe von Daten in einer Sequenz verschiedener Formulare (z.B. Erstellen eines Projekts)
-      \item Besteht aus \textbf{Wizard Dialog} und mehreren \textbf{Wizard Pages}
-      \item Vordefinierte Extension Points existieren für Wizards zum Erstellen, Importieren und Exportieren von Obk
-    \end{itemize}
+	\item \begin{minipage}{\linewidth}
+		\includegraphics[scale=0.8]{images/manifest.png}
+      \end{minipage}	 
   \end{itemize}
 \end{frame}
 
 
-
 \begin{frame}
-\frametitle{Literature}
-\bibliography{lit}
+	\frametitle{Literature}
+	\begin{itemize}
+		\item Eclipse Dokumentation \\  \textit{http://help.eclipse.org/neon/nav/2\_0}
+		\item Extension Points  \\\textit{http://help.eclipse.org/neon/topic/org.eclipse.platform.doc.isv/\\reference/extension-points/index.html?cp=2\_1\_1}
+	\end{itemize}
+%\bibliography{lit}
 \end{frame}
 
 

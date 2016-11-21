@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.6.30)  21 NOV 2016 21:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.6.30)  21 NOV 2016 19:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1056,7 +1056,7 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
-))) (./slides.aux)
+))) (build/slides.aux)
 \openout1 = `slides.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
@@ -1152,7 +1152,7 @@ LaTeX Info: Redefining \ref on input line 24.
 LaTeX Info: Redefining \pageref on input line 24.
 LaTeX Info: Redefining \nameref on input line 24.
 
-(./slides.out) (./slides.out)
+(build/slides.out) (build/slides.out)
 \@outlinefile=\write5
 \openout5 = `slides.out'.
 
@@ -1234,10 +1234,11 @@ Package hyperref Warning: Option `pdftitle' has already been used,
 Package hyperref Warning: Option `pdfauthor' has already been used,
 (hyperref)                setting the option has no effect on input line 24.
 
-(./slides.nav) [1
+(build/slides.nav) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/eclipse.png> <./l
-ayout/logoSiegen.png> <./layout/logoPI.png>] (./slides.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/logoTitle.png> <.
+/layout/logoSiegen.png> <./layout/logoPI.png>]
+(build/slides.toc)
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 (Font)              size <5> substituted on input line 52.
@@ -1246,7 +1247,7 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 
 ] [3
 
-] <images/architecture.jpg, id=105, 234.8775pt x 234.8775pt>
+] <images/architecture.jpg, id=107, 234.8775pt x 234.8775pt>
 File: images/architecture.jpg Graphic file (type jpg)
 
 <use images/architecture.jpg>
@@ -1279,97 +1280,14 @@ Package pdftex.def Info: images/architecture.jpg used on input line 61.
 
 ] [16
 
-]
-<images/workspace-ui.png, id=503, 602.25pt x 526.96875pt>
-File: images/workspace-ui.png Graphic file (type png)
+] [17
 
-<use images/workspace-ui.png>
-Package pdftex.def Info: images/workspace-ui.png used on input line 61.
-(pdftex.def)             Requested size: 240.89572pt x 210.78375pt.
- [17
+] [18
 
- <./images/workspace-ui.png>]
-File: images/workspace-ui.png Graphic file (type png)
-
-<use images/workspace-ui.png>
-Package pdftex.def Info: images/workspace-ui.png used on input line 61.
-(pdftex.def)             Requested size: 180.67639pt x 158.09184pt.
- [18
+] [19
 
 ]
-File: images/workspace-ui.png Graphic file (type png)
- <use images/workspace-ui.png>
-Package pdftex.def Info: images/workspace-ui.png used on input line 61.
-(pdftex.def)             Requested size: 180.67639pt x 158.09184pt.
- [19
-
-]
-File: images/workspace-ui.png Graphic file (type png)
-
-<use images/workspace-ui.png>
-Package pdftex.def Info: images/workspace-ui.png used on input line 61.
-(pdftex.def)             Requested size: 180.67639pt x 158.09184pt.
- [20
-
-]
-<images/editor.png, id=628, 348.30125pt x 138.5175pt>
-File: images/editor.png Graphic file (type png)
- <use images/editor.png>
-Package pdftex.def Info: images/editor.png used on input line 61.
-(pdftex.def)             Requested size: 139.31802pt x 55.406pt.
-
-[21
-
- <./images/editor.png>]
-<images/preference.png, id=660, 465.74pt x 382.42876pt>
-File: images/preference.png Graphic file (type png)
-
-<use images/preference.png>
-Package pdftex.def Info: images/preference.png used on input line 61.
-(pdftex.def)             Requested size: 139.72307pt x 114.7295pt.
- [22
-
- <./images/preference.png>]
-<images/toolbar.png, id=692, 500.87125pt x 81.30376pt>
-File: images/toolbar.png Graphic file (type png)
-
-<use images/toolbar.png>
-Package pdftex.def Info: images/toolbar.png used on input line 61.
-(pdftex.def)             Requested size: 200.34494pt x 32.52092pt.
- [23
-
- <./images/toolbar.png>] [24
-
-] [25
-
-] [26
-
-] [27
-
-]
-[28
-
-] [29
-
-] [30
-
-] [31
-
-] [32
-
-]
-LaTeX Font Info:    Try loading font information for OML+cmtt on input line 61.
-
-LaTeX Font Info:    No file OMLcmtt.fd. on input line 61.
-
-
-LaTeX Font Warning: Font shape `OML/cmtt/m/n' undefined
-(Font)              using `OML/cmm/m/it' instead
-(Font)              for symbol `textless' on input line 61.
-
-[33
-
-] <images/manifest.png, id=1031, 332.74312pt x 91.09032pt>
+<images/manifest.png, id=614, 332.74312pt x 91.09032pt>
 File: images/manifest.png Graphic file (type png)
 
 <use images/manifest.png>
@@ -1384,9 +1302,43 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 61.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [34
+) [20
 
- <./images/manifest.png>] [35
+ <./images/manifest.png>] [21
+
+] [22
+
+] [23
+
+] [24
+
+] [25
+
+]
+<images/workspace-ui.png, id=807, 602.25pt x 526.96875pt>
+File: images/workspace-ui.png Graphic file (type png)
+
+<use images/workspace-ui.png>
+Package pdftex.def Info: images/workspace-ui.png used on input line 61.
+(pdftex.def)             Requested size: 240.89572pt x 210.78375pt.
+ [26
+
+ <./images/workspace-ui.png>] [27
+
+] [28
+
+]
+[29
+
+] [30
+
+] [31
+
+] [32
+
+] [33
+
+] (./slides.bbl) [34
 
 ]
 \tf@nav=\write6
@@ -1400,7 +1352,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 63.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 63.
- (./slides.aux)
+ (build/slides.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 63.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 63.
 Package rerunfilecheck Info: File `slides.out' has not changed.
@@ -1410,32 +1362,27 @@ Package rerunfilecheck Info: File `slides.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 63.
  ) ) 
 Here is how much of TeX's memory you used:
- 21694 strings out of 494927
- 417861 string characters out of 6177949
- 497916 words of memory out of 5000000
- 24341 multiletter control sequences out of 15000+600000
- 9571 words of font info for 36 fonts, out of 8000000 for 9000
+ 21645 strings out of 494927
+ 416599 string characters out of 6177949
+ 496264 words of memory out of 5000000
+ 24295 multiletter control sequences out of 15000+600000
+ 9271 words of font info for 35 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  48i,17n,62p,386b,768s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmtt10.pfb>
-Output written on slides.pdf (35 pages, 322801 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on build/slides.pdf (34 pages, 311997 bytes).
 PDF statistics:
- 1141 PDF objects out of 1200 (max. 8388607)
+ 1132 PDF objects out of 1200 (max. 8388607)
  1059 compressed objects within 11 object streams
- 75 named destinations out of 1000 (max. 500000)
- 106 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 74 named destinations out of 1000 (max. 500000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
